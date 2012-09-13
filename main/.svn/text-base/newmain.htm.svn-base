@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	margin:0px;
+	padding:0px;
+}
+
+a {
+	text-decoration:none;
+	color: #000;
+}
+ul {
+	list-style:none;
+	margin:0px;
+}
+li {
+	float:left;
+	color:#000;
+}
+.top_bar {
+	position: relative;
+	background: url(../images/header_bg_old.jpg) repeat-x;
+	border:0px;
+	width:100%;
+	height:128px;
+}
+.main_div {
+	position:absolute;
+	background:url(../images/wrapper_bg.jpg) repeat-x;
+	width:100%;
+	height:900px;
+	top:128px;
+}
+.main_bar {
+	position:absolute;
+	width:1000px;
+	height:40px;
+	bottom:0px;
+	left: 50%;
+	margin-left:-500px;
+}
+.admin_bar {
+	position:absolute;
+	width:400px;
+	height:25px;
+	text-align:right;
+	font-size:12px;
+	overflow: hidden;
+	right:8px;
+}
+
+.nick_name {
+	overflow:hidden;
+	width:325px;
+	text-align:right;
+	padding-bottom:3px;
+	margin-right:5px;
+}
+.main_bar li {
+	line-height:40px;
+	width:80px;
+	text-align:center;
+}
+
+img {
+	border:0px;
+}
+.content_div {
+	position:absolute;
+	width:1000px;
+	height:800px;
+	left:50%;
+	margin-left:-500px;
+	background-color:#f8fdff;
+	border-left:1px solid #d1d1d3;
+	border-bottom:1px solid #d1d1d3;
+	border-right:1px solid #d1d1d3;
+}
+.header_bar {
+	position:absolute;
+	width:1000px;
+	height:25px;
+	left:50%;
+	margin-left:-500px;
+	top:10px;
+}
+.main_bar span {
+	color:#FFF;
+	font-family:"黑体";
+	font-size: 20px;
+	height:40px;
+	line-height:40px;
+	cursor:pointer;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+
+var mainTitleValue = '';
+
+function $(obj)
+{
+	return document.getElementById(obj);
+}
+function onFocus(obj, img)
+{
+	if (mainTitleValue == '')
+	{
+		mainTitleValue = obj;
+	}
+	else
+	{
+		if (mainTitleValue == obj)
+	    {
+		    refreshContent(obj);
+	    }
+	    else
+	    {
+			$(mainTitleValue).style.background = '';
+		    mainTitleValue = obj;
+	    }
+	}
+	
+	$(obj).style.background='url('+img+')';
+	refreshContent(obj);
+}
+
+function refreshContent(title)
+{ 
+	if (title == 'purchaseImg')
+		$('mainFrame').src = 'purchase.htm'
+	else if (title =='saleImg')
+		$('mainFrame').src = 'sale.htm'
+	else if (title =='storeImg')
+		$('mainFrame').src = 'store.htm'
+	else if (title =='reportImg')
+		$('mainFrame').src = 'report.htm'
+}
+
+function init()
+{
+	mainTitleValue = 'saleImg';
+	onFocus('saleImg', '../images/main_title_focus.png');
+	
+}
+</script>
+</head>
+
+<body onload="init();">
+<div class="top_bar"">
+  <div class="main_bar">
+    <ul>
+      <li id="purchaseImg"><span onClick="onFocus('purchaseImg', '../images/main_title_focus.png')">进货</span></li>
+      <li id="saleImg"><span onClick="onFocus('saleImg', '../images/main_title_focus.png')">出货</span></li>
+      <li id="storeImg"><span onClick="onFocus('storeImg', '../images/main_title_focus.png')">库存</span></li>
+      <li id="reportImg"><span onClick="onFocus('reportImg', '../images/main_title_focus.png')">报表</span></li>
+    </ul>
+  </div>
+  
+  <div class="header_bar">
+  <div class="admin_bar">
+    <ul>
+      <li class="nick_name">管理员</li>
+      <li><a href="#">退出</a></li>
+    </ul>
+  </div>
+  </div>
+</div>
+
+<div class="main_div">
+  <div id="content_div" class="content_div">
+    <iframe name="mainFrame" id="mainFrame" frameborder="no" scrolling="no" src="" width="100%" height="100%" allowTransparency="true">
+    </iframe> 
+  </div>
+</div>
+
+</body>
+
+</html>

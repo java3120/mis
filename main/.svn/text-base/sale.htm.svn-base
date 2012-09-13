@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title></title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+.main_div {
+	position:absolute;
+	width:1000px;
+	height:800px;
+	top:0px;
+	left:0px;
+	background-color:#dfe8f6;
+} 
+ 
+.list_title {
+	position:relative;
+	width:993px;
+	height:25px;
+	background:transparent url(../images/corners-sprite.gif) repeat 0 0;
+	border: 1px solid #99BBE8;
+	line-height:25px;
+	color:#15428b;
+	font-family: "宋体";
+	padding-left:5px;
+	
+}
+.list_row_name {
+	position:relative;;
+	width:100%;
+	height:24px;
+}
+
+.list_column_title {
+	border-right: 1px solid #d0d0d0;
+	border-bottom: 1px solid #d0d0d0;
+	background:url(../images/grid3-hrow.gif) repeat-x
+}
+.column_name {
+	border-left: 1px solid #d0d0d0;
+	padding-left:5px;
+	width:36%;
+}
+.column_price {
+   padding-left:5px;
+   width:16%;	
+}
+.list_content {
+	position:relative;
+	width:100%;
+	height:750px;
+}
+-->
+</style>
+</head>
+   
+<body>
+<div class="main_div">
+  <div class="list_title">商品列表</div>
+  <div class="list_row_name">
+    <table width="100%" border="0">
+      <tr>
+        <td class="list_column_title column_name">商品名称</td>
+        <td class="list_column_title column_price">定价</td>
+        <td class="list_column_title column_price">库存</td>
+        <td class="list_column_title column_price">销售价格</td>
+        <td class="list_column_title column_price">操作</td>
+      </tr>
+	</table>
+  </div>
+  
+  <div id="content_div" class="list_content">
+    
+  </div>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+body {
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration:none;
+	color: #000;
+}
+ul {
+	list-style:none;
+	margin:0px;
+}
+li {
+	float:left;
+	color:#000;
+}
+.top_bar {
+	position: relative;
+	background: url(../images/header_bg.jpg) repeat-x;
+	border:0px;
+	width:100%;
+	height:128px;
+}
+.main_div {
+	position:absolute;
+	background:url(../images/wrapper_bg.jpg) repeat-x;
+	width:100%;
+	height:900px;
+	top:128px;
+}
+.main_bar {
+	position:absolute;
+	width:1000px;
+	height:40px;
+	bottom:0px;
+	left: 50%;
+	margin-left:-500px;
+}
+.admin_bar {
+	position:absolute;
+	width:400px;
+	height:25px;
+	text-align:right;
+	font-size:12px;
+	overflow: hidden;
+	right:8px;
+}
+
+.nick_name {
+	overflow:hidden;
+	width:325px;
+	text-align:right;
+	padding-bottom:3px;
+	margin-right:5px;
+}
+.main_bar li {
+	line-height:40px;
+	width:80px;
+	text-align:center;
+}
+
+img {
+	border:0px;
+}
+.content_div {
+	position:absolute;
+	width:1000px;
+	height:800px;
+	left:50%;
+	margin-left:-500px;
+	background-color:#e0ebf4;
+	border-left: solid 1px #80ADD9;
+	border-right: solid 1px #80ADD9;
+    border-bottom: solid 1px #D6D9DB;
+}
+.header_bar {
+	position:absolute;
+	width:1000px;
+	height:25px;
+	left:50%;
+	margin-left:-500px;
+	top:10px;
+}
+.main_bar a {
+	color:#FFF;
+	font-family:"黑体";
+	font-size: 20px;
+	height:40px;
+	line-height:40px;
+}
